@@ -1,4 +1,4 @@
-package com.weightbit.dario.weightbit;
+package com.weightbit.dario.weightbit.Activities;
 
 import android.app.Application;
 
@@ -9,7 +9,7 @@ import io.realm.RealmConfiguration;
  * Created by Dario on 08/06/2017.
  */
 
-public class WeighbitAApplication extends Application {
+public class WeightbitApplication extends Application {
 public static final int SCHEMA_VERSION = 1;
     @Override
     public void onCreate(){

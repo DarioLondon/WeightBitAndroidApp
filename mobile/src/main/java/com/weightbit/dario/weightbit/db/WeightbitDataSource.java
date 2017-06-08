@@ -52,7 +52,7 @@ public class WeightbitDataSource {
 
     }
 
-    List<User> getUser(){
+    public List<User> getUser(){
         return  realm.where(User.class)
                 .findAll();
     }
