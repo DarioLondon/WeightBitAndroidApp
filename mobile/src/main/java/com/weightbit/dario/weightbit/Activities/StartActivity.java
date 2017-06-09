@@ -16,11 +16,13 @@ import java.util.List;
  */
 
 public class StartActivity extends AppCompatActivity{
+
     private static final String TAG = RegistartionActivity.class.getSimpleName();
     private WeightbitDataSource dataSource;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start_activity);
         dataSource = new WeightbitDataSource();
@@ -37,9 +39,13 @@ public class StartActivity extends AppCompatActivity{
             Intent intent = new Intent(this,RegistartionActivity.class);
             startActivity(intent);
             Log.d(TAG,"no user found"+user);
+            this.finish();
         }
         else{
+            Intent intent = new Intent(this,MenuActivity.class);
+            startActivity(intent);
             Log.d(TAG," user found"+user);
+            this.finish();
         }
 
     }
